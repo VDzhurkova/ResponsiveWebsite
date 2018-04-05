@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/services.css" rel="stylesheet" />
+</head>
+<body>
+    <section id="pageWrapper">
+        <section class="container" id="services">
+
+            <div class="sectionHeader">
+                <h2>Services</h2>
+               <a href="index.html" class="myButton homeBtn" style="float:left">Home</a>
+            </div>
+            <div class="row">
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="#regular"><img src="images/domestic.jpg" /></a>
+                        <div class="title">
+                            <h6>Regular Services</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6 ">
+                    <div class="card">
+                        <a href="#spring"><img src="images/spring.jpg" /></a>
+                        <div class="title">
+                            <h6>Spring Cleaning</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="#endoftenancy"><img src="images/endoftenancy.jpg" /></a>
+                        <div class="title">
+                            <h6>End of Tenancy</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="#afterbuilders"><img src="images/afterbuilders.jpg" /></a>
+                        <div class="title">
+                            <h6>After Builders</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="#window"><img src="images/wincl.jpg" /></a>
+                        <div class="title">
+                            <h6>Window Cleaning</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="#carpet"><img src="images/carpet.jpg" /></a>
+                        <div class="title" id="up">
+                            <h6>Carpet &amp; Upholstery</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="#ironing"><img src="images/ironing.jpg" /></a>
+                        <div class="title">
+                            <h6>Ironing</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 col-md-6">
+                    <div class="card">
+                        <a href="#party"><img src="images/partyhelp.jpg" /></a>
+                        <div class="title">
+                            <h6>Party Help</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="regular" class="container">
+            <!--<div class="navigation">
+                <a href="#" class="forwards" onclick="scrollForward(event);"><i class="fas fa-arrow-circle-right fa-2x"></i></a>
+                <a href="#services" class="backwards"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
+            </div>-->
+
+            <div class="sectionHeader">
+                <h2>Regular Service</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h4 class="subtitle">We offer</h4>
+                    <div class="navBtn">
+                        <button class="myButton navBtn-item" onclick="document.getElementById('offer').style.display = 'block'"><i class="fas fa-bars"></i>&nbsp; Regular Tasks</button><br />
+                        <button class="myButton navBtn-item" onclick="document.getElementById('ondemand').style.display = 'block'"><i class="fas fa-bars"></i>&nbsp; On demand</button>
+                    </div>
+                    <div class="modal" id="offer">
+                        <div class="modal-content zoom">
+                            <header>
+                                <span style="float:right;background-color:#a683b3;color:#fff" onclick="document.getElementById('offer').style.display = 'none'" class="myButton">&minus;</span>
+                            </header>
+                            <ul class="content">
+                                <li>Dusting - ornaments, electrical goods, furniture, skirting boards</li>
+                                <li>Vacuum</li>
+                                <li>Mop</li>
+                                <li>Emptying bin baskets</li>
+                                <li>Bathrooms - bathtub/shower, tiles, mirrors</li>
+                                <li>Polishing surfaces, cupboards (exterior), white goods (exterior)</li>
+                                <li>Kitchen - sink, worktop</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="modal" id="ondemand">
+                        <div class="modal-content zoom">
+                            <header>
+                                <span style="float:right;background-color:#a683b3;color:#fff" onclick="document.getElementById('ondemand').style.display = 'none'" class="myButton">&minus;</span>
+                            </header>
+                            <ul class="content">
+                                <li>Clearing out cupboards</li>
+                                <li>Cleaning ovens</li>
+                                <li>Cleaning brass and silver</li>
+                                <li>Washing walls</li>
+                                <li>Cleaning inside windows</li>
+                                <li>Cleaning inside and/or defrosting fridges and freezers</li>
+                                <li>Ironing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <h4 class="subtitle">Prices</h4>
+                    <div class="tableinformation">
+                        <div class="row">
+                            <a href="javascript:void(0)" class="col-6" onclick="openPrice(event, 'weekly');" id="myRegular">
+                                <div class="tablelink purple">weekly</div>
+                            </a>
+                            <a href="javascript:void(0)" class="col-6" onclick="openPrice(event, 'fortnightly');">
+                                <div class="tablelink purple">fortnightly</div>
+                            </a>
+                        </div>
+                        <div id="weekly" class="tablecontent">
+                            <p style="font-size:15px">from £12 per hour</p>
+                            <p style="display:inline!important;font-size:12px"><strong style="font-weight:bold">Note:</strong>&nbsp; Cleaning materials supplied by the client</p>
+                            <p style="font-size:15px">from £13 per hour</p>
+
+                        </div>
+                        <div id="fortnightly" class="tablecontent">
+                            <p style="font-size:15px">from £13 per hour</p>
+                            <p style="display:inline!important;font-size:12px"><span style="font-weight:bold">Note:</span>&nbsp; Cleaning materials supplied by the client</p>
+                            <p style="font-size:15px">from £14 per hour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="spring" class="container">
+            <div class="sectionHeader">
+                <h2>Spring Cleaning</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h4 class="subtitle">This service includes</h4>
+                    <div class="navBtn">
+                        <button class="myButton navBtn-item" onclick="document.getElementById('hallway').style.display = 'block'"><i class="fas fa-bars"></i>&nbsp; Hallway and stair case</button><br/>
+                        <button class="myButton navBtn-item" onclick="document.getElementById('kitchen').style.display = 'block'"><i class="fas fa-bars"></i>&nbsp; Kitchen</button><br/>
+                        <button class="myButton navBtn-item" onclick="document.getElementById('rooms').style.display = 'block'"><i class="fas fa-bars"></i>&nbsp; Rooms</button><br />
+                        <button class="myButton navBtn-item" onclick="document.getElementById('bath').style.display = 'block'"><i class="fas fa-bars"></i>&nbsp; Bathroom</button>
+                    </div>
+                    <div class="modal" id="hallway">
+                        <div class="modal-content zoom">
+                            <header>
+                                <h6> Hallway and stair case</h6>
+                                <span style="float:right" onclick="document.getElementById('hallway').style.display = 'none'" class="myButton">&minus;</span>
+                            </header>
+                            <ul class="content">
+                                <li>Wipe entrance door</li>
+                                <li>Wipe light switches</li>
+                                <li>Wipe skirting boards</li>
+                                <li>Vacuum carpet</li>
+                                <li>Mop floor</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal" id="kitchen">
+                        <div class="modal-content zoom">
+                            <header>
+                                <h6>Kitchen</h6>
+                                <span style="float:right" onclick="document.getElementById('kitchen').style.display = 'none'" class="myButton">&minus;</span>
+                            </header>
+                                <ul class="content">
+                                <li>Wipe door</li>
+                                <li>Wipe light switches</li>
+                                <li>Wipe skirting boards</li>
+                                <li>Wash up</li>
+                                <li>Clean hob</li>
+                                <li>Clean inside/outside microwave</li>
+                                <li>Clean inside/outside oven</li>
+                                <li>Clean sink</li>
+                                <li>Clean inside/outside fridge</li>
+                                <li>Clean outside kitchen cupboards</li>
+                                <li>Wipe all surfaces</li>
+                                <li>Wipe electrical goods</li>
+                                <li>Clean inside windows and window skills</li>
+                                <li>Vacuum carpet</li>
+                                <li>Mop floor</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal" id="rooms">
+                        <div class="modal-content zoom">
+                            <header>
+                                <h6>Rooms</h6>
+                                <span style="float:right" onclick="document.getElementById('rooms').style.display = 'none'" class="myButton">&minus;</span>
+                            </header>
+                                <ul class="content">
+                                <li>Wipe door</li>
+                                <li>Wipe light switches</li>
+                                <li>Wipe skirting boards</li>
+                                <li>Clean/polish mirrors</li>
+                                <li>Wipe table</li>
+                                <li>Dust all surfaces</li>
+                                <li>Clean inside windows and window skills</li>
+                                <li>Vacuum carpet</li>
+                                <li>Mop floor</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="modal" id="bath">
+                        <div class="modal-content zoom">
+                            <header>
+                                <h6>Bathroom</h6>
+                                <span style="float:right" onclick="document.getElementById('bath').style.display = 'none'" class="myButton">&minus;</span>
+                            </header>
+                                <ul class="content">
+                                <li>Wipe door</li>
+                                <li>Wipe light switches</li>
+                                <li>Wipe skirting boards</li>
+                                <li>Scrub and remove lime scale from bath, shower, shower doors, sink, tiles</li>
+                                <li>Scrub and desinfect toilet seat and bowl</li>
+                                <li>Wipe/polish all surfaces</li>
+                                <li>Clean/polish mirrors</li>
+                                <li>Clean inside windows and window skills</li>
+                                <li>Vacuum carpet</li>
+                                <li>Mop floor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h4 class="subtitle">Price</h4>
+                    <div class="content">
+                        <blockquote>
+                            <p style="font-size:15px">£15 per hour per person</p>
+                            <p style="display:inline!important;font-size:12px">
+                                <span style="font-weight:bold">Note:</span>
+                                &nbsp;minimum 4 hours per visit, cleaning materials supplied by the client
+                            </p>
+                        </blockquote>
+                        <blockquote>
+                            <p style="font-size:15px">£16 per hour per person</p>
+                            <p style="display:inline!important;font-size:12px">
+                                <span style="font-weight:bold">Note:</span>
+                                &nbsp; minimum 4 hours per visit, cleaning materials supplied by the HighLine
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="endoftenancy" class="container">
+            <div class="sectionHeader">
+                <h2>End of Tenancy</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="content">
+                <p>
+                    If your tenancy agreement is coming to an end, we know how important it is to leave
+                    the property in immaculate condition. We have a team of cleaners professionally trained to do an outstanding job
+                    according to our Professional End of Tenancy Cleaning service check list. The quality of the job we will do for you will
+                    meet the expectations of Landlords and Estate Agencies. We want to be your preferred cleaning company and we will en-devour
+                    to satisfy your requirements at every level. If you are not completely happy with the results please inform us within 24 hours
+                    of completing the job.
+                </p>
+            </div>
+            <div class="content">
+                <h4 class="subtitle">Price</h4>
+
+                <div class="tableinformation">
+                    <div class="row">
+
+                        <a href="javascript:void(0)" class="col-6" onclick="openPrice(event, 'Flats');" id="myLink">
+                            <div class="tablelink purple">Flats </div>
+                        </a>
+
+
+                        <a href="javascript:void(0)" class="col-6" onclick="openPrice(event, 'Houses');">
+                            <div class="tablelink  purple">Houses</div>
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div id="Flats" class="tablecontent">
+                            <table class="table col-12">
+                                <thead>
+                                    <tr>
+                                        <th>Flats</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Studio</td>
+                                        <td>from £110</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 Bedroom</td>
+                                        <td>from £140</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 Bedroom</td>
+                                        <td>from £160</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 Bedroom</td>
+                                        <td>from £180</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 Bedroom</td>
+                                        <td>from £220</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div id="Houses" class="tablecontent">
+                            <table class="table col-12">
+                                <thead>
+                                    <tr>
+                                        <th>Houses</th>
+                                        <th>Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 Bedroom</td>
+                                        <td>from £150</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 Bedroom</td>
+                                        <td>from £190</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 Bedroom</td>
+                                        <td>from £230</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4 Bedroom</td>
+                                        <td>from £260</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 Bedroom</td>
+                                        <td>from £310</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="afterbuilders" class="container">
+            <div class="sectionHeader">
+                <h2>AfterBuilders</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="content">
+                <p>
+                    Every home refurbishment and decoration causes a lot of dust and dirt. HighLine Domestic Services carries out after
+                    builders cleans. HighLine will leave your home nice and tidy, just the way you would like it. In a few hours your property will be spotless, sparkle and dust free.
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <h4 class="subtitle">This service includes</h4>
+                    <div class="content" style="text-align:center">
+                        <p style="display:block">Thorughtly cleaning of all doors and door frames</p>
+                        <p style="display:block">Thorughtly cleaning of all light switches and sockets</p>
+                        <p style="display:block">Thorughtly cleaning of all skirting boards</p>
+                        <p style="display:block">Clean/polish mirrors</p>
+                        <p style="display:block">Cleaning all radiators</p>
+                        <p style="display:block">Dust all surfaces</p>
+                        <p style="display:block">Thorughtly cleaning of inside all windows and window skills</pstyle="display:block">
+                        <p style="display:block">Vacuum carpet</p>
+                        <p style="display:block">Mop floor</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <h4 class="subtitle">Price</h4>
+                    <div class="content">
+                        <blockquote>
+                            <p style="font-size:15px">£15 per hour per person</p>
+                            <p style="display:inline!important;font-size:12px">
+                                <span style="font-weight:bold">Note:</span>
+                                &nbsp;minimum 4 hours per visit, cleaning materials supplied by the client
+                            </p>
+                        </blockquote>
+                        <blockquote>
+                            <p style="font-size:15px">£16 per hour per person</p>
+                            <p style="display:inline!important;font-size:12px">
+                                <span style="font-weight:bold">Note:</span>
+                                &nbsp; minimum 4 hours per visit, cleaning materials supplied by the HighLine
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="window" class="container">
+            <div class="sectionHeader">
+                <h2>Window Cleaning</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="content">
+                <p>
+                    HighLine Domestic Services offers provides a professional Window cleaning service to a wide range of clients
+                    including households, small offices, schools, colleges, shops, pubs, restaurants and hotels.
+                </p>
+                <p>
+                    The Window Cleaning Service is carried out on weekly, monthly and one off basis.
+                    Call us now  to set up your cleaning plan according your requirements.
+                </p>
+                <p><a href="index.html#contact" style="text-decoration:none;color:#af26b5;font-weight:bold">Contact Us</a><p><p>&nbsp; get a quote</p>
+            </div>
+        </section>
+        <section id="carpet" class="container">
+            <div class="sectionHeader">
+                <h2>Carpet &amp; Upholstery Cleaning</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="content">
+                <p>
+                    HighLine offers high quality carpet cleaning service. Our carpet cleaning team is professionally trained and equipped with the latest technologically advanced machines. HightLine carpet cleaners assure our clients highest
+                    level of satisfaction. We are using organic cleaning materials to protect the health of your family and pets.
+                </p> <br />
+                <p>The thoroughly carpet cleaning provides</p>
+                <ul>
+                    <li>Allergens removal- such as dust and pets hair</li>
+                    <li>more freshness and comfort-a softer, better looking carpet</li>
+                </ul>
+            </div>
+            <!--<div class="row">-->
+                <div class="content">
+                    <h4 class="subtitle">Equipment</h4>
+                    <div class="row">
+                        <div class="col-6 col-xs-12">
+                            <div class="over card">
+                                <img src="images/machine1.png" alt="Ashbys">
+                            </div>
+                            <div class="overlay card">
+                                <img src="images/machine2.png" alt="Ashbys">
+                            </div>
+                        </div>
+                        <div class="col-6 col-xs-12">
+                            <p>
+                                Ashbys Ninja 400 psi V2 SteamMate Heating System Built-in 3 Kw SteamMate System. Manifactures of professional carpet, upholstery, curtain and hard floor
+                                cleaning equipment in the UK. The in-line heat exchanger provides instant steam-boosted carpet cleaning for faster, more deeper results with the lowest possible drying times.
+                            </p>
+                            <ul style="list-style-type:disc">
+                                <li>Powerful in-line heat-exchanger system for instant heat.</li>
+                                <li>Fully adjustable temperature giving constant heat.</li>
+                                <li>Coated Head Pump with Pressure Gauge plus Flow-rate & Pressure Control System.</li>
+                            </ul>
+                            <p><a href="index.html#contact" style="text-decoration:none;color:#af26b5;font-weight:bold">Contact Us</a> to get a quote</p>
+                        </div>
+                    </div>
+                </div>
+            <!--</div>-->
+        </section>
+        <section id="ironing" class="container">
+            <div class="sectionHeader">
+                <h2>Ironing Service</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="content">
+                <p>
+                    HighLine Domestic Services offers Ironing services. We can take your ironing away and return
+                    it to you the next day <em style="color:#ff0000;text-transform:uppercase">free</em> of charge all nicely ironed and ready to wear.
+                </p>
+                <p>
+                    Price List
+                </p>
+                <p><a href="index.html#contactus" style="text-decoration:none;color:#af26b5;font-weight:bold">On request</a></p>
+            </div>
+        </section>
+        <section id="party" class="container">
+            <div class="sectionHeader">
+                <h2>Party Help</h2>
+                <a href="index.html" class="myButton homeBtn">Home</a>
+                <a href="#services" class="myButton homeBtn">Services</a>
+            </div>
+            <div class="content">
+                <div class="img-wrapper">
+                    <div class="card"><img src="images/champagner.png" /></div>
+                    <div class="card"><img src="images/wine.png" /></div>
+                    <div class="card"><img src="images/desktop.png" /></div>
+                    <div class="card"><img src="images/food.png" /></div>
+                    <div class="card"><img src="images/kebab.png" /></div>
+                    <div class="card"><img src="images/plate.png" /></div>
+                    <div class="card"><img src="images/restaurant.png" /></div>
+                    <div class="card"><img src="images/table.png" /></div>
+                    <div class="card"><img src="images/warmfood.png" /></div>
+                </div>
+            </div>
+            <div class="content">
+                <p>
+                    Are you looking for professionally trained waiting staff, you are on the right place.
+                    HightLine Domestic Services offers high qualified waiters and waitresses.
+                </p>
+
+                <p>Just&nbsp;</p><p> <a href="index.html#contact" style="text-decoration:none;color:#af26b5;font-weight:bold">Contact Us&nbsp;</a></p><p>or call us &nbsp;</p><p> <a href="tel:5551234567"><i class="fas fa-mobile-alt fa-2x" style="color:#af26b5"></i></a></p><p>&nbsp; to get more information</p>
+            </div>
+        </section>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="scripts/services.js"></script>
+
+</body>
+</html>
